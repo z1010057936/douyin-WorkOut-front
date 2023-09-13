@@ -1,0 +1,14 @@
+.map-btn-area {
+    width: 100%;
+    bottom: 0px;
+    position: fixed;
+    flex-direction: row;
+    display: flex;
+    background-color: #ffffff;
+}
+.map-btn-text {
+    padding-left: 20rpx;
+    font-size: 30rpx;
+    font-weight: 400;
+    width: 520rpx;
+}

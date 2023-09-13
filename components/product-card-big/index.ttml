@@ -1,0 +1,31 @@
+<block tt:for="{{productList}}">
+<view class="product-card" bindtap="toProductDetail" data-id="{{item.id}}">
+    <image class="pro-image" mode="aspectFill" src="{{item.image}}">
+    </image>
+    <view class="pro-infe">
+        <view class="pro-desc">
+            <!-- 标题 -->
+            <view class="pro-tittle"> {{item.tittle}}</view>
+            <!-- 薪资 -->
+            <view class="salary">¥{{item.salary}}</view> 
+        </view>
+    </view>
+    <!-- 标签，只显示3个 -->
+    <view class="lable-box">
+        <view class="lable-postName">{{item.postName}} |</view>
+        <view class="lable">{{item.label[0]}}</view>
+        <view class="lable">{{item.label[1]}}</view>
+        <view class="lable">{{item.label[2]}}</view>
+    </view>
+    <view class="address">{{item.address}}</view>
+    <view class="bottom-box">
+        <view class="join-btn" catchtap="joinPost">
+            立即报名
+        </view>
+        <view class="join-btn" style="background-color: #ffffff; border: 1px solid #FE2C55; color: #FE2C55;" catchtap="tapMakePhoneCall" data-comPhoneNum="{{item.comPhoneNum}}">
+            电话咨询
+        </view>
+    </view>
+    
+</view>
+</block>

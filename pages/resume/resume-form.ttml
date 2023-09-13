@@ -1,0 +1,118 @@
+<view class="swiper-container">
+  <!-- 用户信息及头像 -->
+  <view class="custom-info">
+    <view class="custom-info-avatar"></view>
+    <view class="custom-info-name"></view>
+    <view></view>
+  </view>
+
+  <!-- 表单 -->
+  <view class="form-body">
+    <form bindsubmit="formSubmit" bindreset="formReset">
+
+      <view class="page-section">
+        <view class="page-section-title">姓名</view>
+        <view class="input-block">
+          <input class="ttui-input" name="name" maxlength="10" placeholder="请输入您的姓名" />
+        </view>
+      </view>
+
+      <view class="page-section" style="display: flex; flex-direction: row;">
+        <view class="sex-box">
+          <view class="page-section-title">性别</view>
+          <radio-group style="text-align: center;" name="sex">
+            <label class="sex-check-box">
+              <radio value="1" disabled="{{false}}" color="#F85959" />男
+            </label>
+            <label class="sex-check-box">
+              <radio value="2" disabled="{{false}}" color="#F85959" />女
+            </label>
+          </radio-group>
+        </view>
+        <view class="bodyStatus">
+          <view class="page-section-title">健康状况(请选择)</view>
+            <picker name="bodyStatus" mode="selector" bindchange="bodyStatusChange" value="{{bodyStatusIndex}}"
+              range="{{bodyStatusArray}}">
+              <view class="bodyStatusPicker">
+                当前选择：{{bodyStatusArray[bodyStatusIndex]}}
+              </view>
+            </picker>
+          
+        </view>
+      </view>
+
+      <view class="page-section">
+        <view class="page-section-title">身份证号</view>
+        <view class="ttui-cells input-block">
+          <view class="ttui-cell">
+            <view class="ttui-cell__bd">
+              <input class="ttui-input" type="idcard" name="idno" placeholder="请输入您的身份证号" />
+            </view>
+          </view>
+        </view>
+      </view>
+
+      <view class="page-section">
+        <view class="page-section-title">手机号</view>
+        <view class="ttui-cells input-block">
+          <view class="ttui-cell">
+            <view class="ttui-cell__bd">
+              <input class="ttui-input" type="number" maxlength="11" name="phoneNum" placeholder="请输入您的手机号" />
+            </view>
+          </view>
+        </view>
+      </view>
+
+      <view class="page-section">
+        <view class="page-section-title">期望职位</view>
+        <view class="ttui-cells input-block">
+          <view class="ttui-cell">
+            <view class="ttui-cell__bd">
+              <input class="ttui-input" maxlength="20"  name="wantPost" placeholder="请输入职位名称" />
+            </view>
+          </view>
+        </view>
+      </view>
+
+      <view class="page-section">
+        <view class="page-section-title">期望城市</view>
+        <view class="ttui-cells input-block">
+          <view class="ttui-cell">
+            <view class="ttui-cell__bd">
+              <input class="ttui-input" disabled="false" name="wantCity" placeholder="请输入职位名称" />
+            </view>
+          </view>
+        </view>
+      </view>
+
+      <view class="page-section">
+        <view class="page-section-title">期望薪资</view>
+        <view class="ttui-cells input-block">
+          <view class="ttui-cell">
+            <view class="ttui-cell__bd">
+              <input class="ttui-input" maxlength="20" name="wantSalary" placeholder="请输入期望薪资(如：5000-10000元/月)" />
+            </view>
+          </view>
+        </view>
+      </view>
+
+      <view class="page-section">
+        <view class="page-section-title">紧急联系人</view>
+        <view class="ttui-cells input-block">
+          <view class="ttui-cell">
+            <view class="ttui-cell__bd">
+              <input class="ttui-input" name="EmContactName" placeholder="请输入联系人姓名" />
+              <input class="ttui-input" name="EmContactPhoneNum" placeholder="请输入联系人手机号" />
+            </view>
+          </view>
+        </view>
+      </view>
+
+      <view class="page-section page-section-space button-block">
+        <button type="primary" formType="submit">提交</button>
+        <button formType="reset">重设</button>
+      </view>
+    </form>
+  </view>
+
+</view>

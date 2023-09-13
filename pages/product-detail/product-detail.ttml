@@ -1,0 +1,70 @@
+<view class="swiper-container">
+<swiper class="pro-swiper" bindchange="switchTap" current="{{current}}" autoplay="true" interval="3000">
+    <block tt:for="{{swiperImg}}">
+        <swiper-item>
+            <image src="{{item}}"></image>
+        </swiper-item>
+    </block>
+</swiper>
+<view class="current">{{current+1}}<text>/</text>{{swiperImg.length}}</view>
+</view>
+
+<view class="pro-detail" >
+    <!-- 标题 薪资 -->
+    <view class="pro-tittle">
+        <view class="pro-name">{{companiesInfo.tittle}}</view>
+        <view class="pro-salary">¥{{companiesInfo.salary}}</view>
+    </view>
+
+    <!-- 地址 -->
+    <view class="address-box" bindtap="gotoAddress">
+        <image class="address-bg" mode="aspectFill"  src="../../assets/backGround/mapBackground.png"></image>
+        <view class="address-context">{{companiesInfo.fullAddress}}</view>
+        <view class="address-btn-area">
+        <image class="address-icon" mode="aspectFill" src="../../assets/icon/positioning.png"></image> 
+        </view>
+    </view>
+
+    <!-- 岗位标签 -->
+    <view class="post-label">
+        <view class="post-label-box">
+            <view class="common-tittle">
+                岗位描述
+                <span style="display: block; width: 50rpx; height: 20rpx; background-color: #FE2C55;"></span>
+            </view>
+            <view class="post-label-detail">
+                <view tt:for="{{companiesInfo.label}}">{{item}}</view>
+            </view>
+        </view>
+    </view>
+    
+
+    
+    <view class="pack-detail">
+        <!-- 工作内容 -->
+        <view class="pro-introduce">
+        <view tt:for="{{posts}}" class="package-details">
+            <span class="common-tittle">
+                {{item.tittle}}
+                <span style="display: block; width: 50rpx; height: 20rpx; background-color: #FE2C55;"></span>
+            </span>
+            <view class="context">{{item.context}}</view>
+        </view>
+        <!-- 图文详情 -->
+        <view class="graphic-detail">
+            <span class="common-tittle">图文详情</span>
+            <block tt:for="{{companiesInfo.graphic_details}}">
+                <image src="{{item.image}}"></image>
+            </block>
+        </view>
+    </view>
+    </view>
+    <view class="bottom"  style="padding-bottom:{{iPhoneBottomHeight + 'px'}};">
+        <view class="bottom-interaction" style="padding-bottom:{{iPhoneBottomHeight + 'px'}}">
+            <button class="callPhone-button" data-comPhoneNum="{{companiesInfo.comPhoneNum}}"  bindtap="tapMakePhoneCall">电话咨询</button>
+            <button class="submit-button" bindtap="checkLogin">立即报名</button>
+        </view>
+    </view>
+    <view style="height: 104rpx;"></view>
+    <!-- <view class="bg"></view> -->
+</view>

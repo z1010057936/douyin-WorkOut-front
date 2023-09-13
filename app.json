@@ -1,0 +1,38 @@
+{
+  "pages": [
+    "pages/index/index", 
+    "pages/category/category",
+    "pages/custom-login/custom-login",
+    "ext://microapp-trade-plugin/order-confirm",
+    "ext://microapp-trade-plugin/refund-apply",
+    "ext://microapp-trade-plugin/refund-detail",
+    "pages/product-detail/product-detail" ,
+    "ext://microapp-trade-plugin/trade-order-detail",
+    "pages/mapArea/open-map-app",
+    "pages/resume/resume-form"
+  ],
+
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "安祝欣闪聘",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#161823",
+    "selectedColor": "#FE2C55",
+    "list": [{
+        "pagePath": "pages/index/index",
+        "text": "主页",
+        "iconPath": "./assets/house.png",
+        "selectedIconPath": "./assets/house-selected.png"
+      },
+      {
+        "pagePath": "pages/custom-login/custom-login",
+        "text": "我的",
+        "iconPath": "./assets/user.png",
+        "selectedIconPath": "./assets/user-selected.png"
+      }
+    ]
+  }
+}

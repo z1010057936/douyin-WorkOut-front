@@ -1,0 +1,31 @@
+<block tt:if="{{ isLogin }}">
+  <view tt:if="{{ !phoneNumber }}" class="wrapper phone-number-login-wrapper">
+    <image class="icon" src="../../assets/icon/com.png"></image>
+    <view class="login-tip">登录以体验更多精彩内容</view>
+
+    <button tt:if="{{ ruleChecked }}" class="login-button" open-type="getPhoneNumber"
+      bindgetphonenumber="getPhoneNumberHandler">
+      <image class="phone-number-icon" src="../../assets/Vector.png"></image>
+      抖音手机号登录
+    </button>
+    <button tt:else class="login-button" bindtap="showMask">
+      <image class="phone-number-icon" src="../../assets/Vector.png"></image>
+      抖音手机号登录
+
+
+    </button>
+    
+  </view>
+  <info tt:else type="phoneNumber" phoneNumber="{{ phoneNumber }}" />
+</block>
+<block tt:if="{{ !isLogin }}">
+  <view class="wrapper douyin-login-wrapper">
+    <image class="icon" src="../../assets/microapp.png"></image>
+    <view class="login-tip">登录以体验更多精彩内容</view>
+    <button class="login-button" bindtap="douyinLogin">
+      <image class="douyin-icon" src="../../assets/Vector.png"></image>
+      抖音登录
+    </button>
+    <view class="app-login-tip">请先登录抖音以便进行后续操作</view>
+  </view>
+</block>

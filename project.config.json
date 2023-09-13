@@ -1,0 +1,13 @@
+{
+    "setting": {
+        "urlCheck": true,
+        "es6": true,
+        "postcss": true,
+        "minified": true,
+        "newFeature": true,
+        "autoCompile": true
+    },
+    "appid": "tt741a02a7eb286bd901",
+    "projectname": "劳务派遣项目",
+    "douyinProjectType": "native"
+}

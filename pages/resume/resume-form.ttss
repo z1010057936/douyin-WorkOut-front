@@ -1,0 +1,51 @@
+.swiper-container {
+    position: relative;
+}
+
+.custom-info {}
+
+.page-section {
+    margin-bottom: 32rpx;
+    margin: 32rpx auto;
+    width: 95%;
+    background-color: #ffffff;
+    border-radius: 16rpx;
+}
+
+.page-section-title {
+    font-size: 32rpx;
+    color: #999999;
+    padding-top: 14rpx;
+    text-align: center;
+}
+
+.input-block {
+    border-radius: 16rpx;
+    margin-bottom: 25rpx;
+}
+
+.ttui-input {
+    height: 96rpx;
+    min-height: 96rpx;
+    line-height: 96rpx;
+    text-align: center;
+}
+
+.sex-box {
+    width: 50%;
+}
+
+.sex-check-box {
+    text-align: center;
+    font-size: 32rpx;
+}
+
+.bodyStatus {
+    width: 50%;
+}
+
+.bodyStatusPicker {
+    text-align: center;
+    font-size: 32rpx;
+}
+
