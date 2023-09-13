@@ -32,3 +32,11 @@ import { data } from '../api/data'
   export function getProvince() {
     return data
   }
+
+  export function getCustomResume() {
+    return data.customResume
+  }
+
+  export function getCustomJoinLog() {
+    return data
+  }

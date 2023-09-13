@@ -16,7 +16,8 @@ Page({
     bindSucess:false,
     isLogin:false,
     current:0,
-    ishidden: true
+    ishidden: true,
+    fromPage: "index"
   },
   
   async onLoad(options) {
@@ -24,7 +25,9 @@ Page({
     this.setData({
       iPhoneBottomHeight:systemInfo.screenHeight - systemInfo.safeArea.bottom,
     })
+    console.log("options",options)
     const { productId } = options;
+    const { fromPage } = options;
     const res = await getShopList();
     if (!res) {
       return;
@@ -42,7 +45,8 @@ Page({
       shopList: res.companies?.slice(0,3),
       swiperImg,
       companiesInfo,
-      posts
+      posts,
+      fromPage
     })
     
   },
@@ -163,17 +167,35 @@ Page({
 
   //立即报名，跳转到简历填写页
   joinPost() {
-    tt.navigateTo({
-      url: `/pages/resume/resume-form`,
-      success: (res) => {
-        
-      },
-      fail: (res) => {
-        console.log(res);
-      },
-    });
-    
+    //判断是否登录
+    const isLogin = tt.getStorageSync("isLogin");
+    console.log("isLogin:",isLogin)
+    if (isLogin == true) {
+      tt.showModal({
+        content: "确定要报名该岗位吗？",
+        confirmText: "确定",
+        cancelText: "关闭",
+        success(res) {
+          if (res.confirm) {
+            //这里调用后台报名接口
+            tt.showToast({
+              title: '报名成功'
+            });
+          }
 
+        }
+      });
+    } else{
+      tt.navigateTo({
+        url: `/pages/resume/resume-form`,
+        success: (res) => {
+          
+        },
+        fail: (res) => {
+          console.log(res);
+        },
+      });
+    }
   },
 
   checkLogin(){

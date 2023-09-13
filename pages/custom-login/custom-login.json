@@ -1,6 +1,7 @@
 {
   "usingComponents": {
+    "customHome": "../custom-home/custom-home"
   },
-  "navigationBarTitleText": "登录",
+  "navigationBarTitleText": "安祝欣闪聘",
   "navigationBarBackgroundColor": "#ffffff"
 }

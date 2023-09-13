@@ -27,11 +27,12 @@
 }
 
 .pro-tittle {
-    font-weight: 500;
+    font-weight: 800;
     font-size: 40rpx;
     line-height: 50rpx;
     color: #161823;
     width: 408rpx;
+    padding-left: 8rpx;
 }
 
 .pro-desc {
@@ -78,6 +79,7 @@
     font-size: 24rpx;
     line-height: 34rpx;
     color: rgba(22, 24, 35, 0.75);
+    padding-left: 8rpx;
 }
 
 .lable-box {
@@ -85,6 +87,7 @@
     font-size: 28rpx;
     display: flex;
     flex-direction: row;
+    padding-left: 8rpx;
 }
 
 .lable-postName {

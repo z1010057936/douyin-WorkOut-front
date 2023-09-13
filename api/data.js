@@ -4,7 +4,7 @@ export const data = {
       "id": "3871280801208409",
       "tittle": "快递行业分拣打包",
       "salary": "17200-18500元/月",
-      "image": "../../assets/product-square.png",
+      "image": "../../assets/banner1.png",
       "notice": "购买前请仔细阅读须知。",
       "address":"四川省·彭山市",
       "fullAddress":"眉山市彭山区人民政府",
@@ -43,6 +43,18 @@ export const data = {
     }
     
   ],
+  "customResume": {
+    "name": "赵铁柱",
+    "sex": "1",
+    "bodyStatus": "2",
+    "idno": "41578965412369852X",
+    "phoneNum": "",
+    "wantPost": "快递员",
+    "wantCity": "彭山市",
+    "wantSalary": "5000-6000元/月",
+    "emContactName": "赵铁锤",
+    "emContactPhoneNum": "14555552226"
+  },
   "provinces": [{
     "id": 0,
     "name": "北京市"

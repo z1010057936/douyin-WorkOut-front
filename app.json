@@ -9,7 +9,8 @@
     "pages/product-detail/product-detail" ,
     "ext://microapp-trade-plugin/trade-order-detail",
     "pages/mapArea/open-map-app",
-    "pages/resume/resume-form"
+    "pages/resume/resume-form",
+    "pages/custom-joinLog/custom-joinLog"
   ],
 
   "window": {

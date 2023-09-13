@@ -1,0 +1,19 @@
+<view style="position: absolute;width: 100%;">
+    <view class="custom-info">
+        <image class="custom-portrait" src="../../assets/icon/avatar.png"></image>
+        <view class="custom-name">{{customInfo.name}}</view>
+    </view>
+    <view class="menu-box">
+        <view class="menu-detail" bindtap="gotoPostDetail" userId="{{userId}}">
+            <view><image class="menu-icon" src="../../assets/icon/joinPostLog.png"></image></view>
+            <view>报名记录</view>
+            <view>></view>
+        </view>
+    
+        <view class="menu-detail" style="border-bottom: 0rpx;" bindtap="gotoResume" userId="{{userId}}">
+            <view><image class="menu-icon" src="../../assets/icon/resume.png"></image></view>
+            <view>我的简历</view>
+            <view>></view>
+        </view>
+    </view>
+</view>

@@ -5,6 +5,10 @@ App({
   onLaunch: function () {
     const systemInfo = tt.getSystemInfoSync();
     this.setGlobalData('systemInfo',systemInfo)
+    const isLogin = tt.getStorageSync("isLogin");
+    if(isLogin == "") {
+      tt.setStorageSync("isLogin", false);
+    }
   },
   getPhoneNumber({ params, success, fail }) {
     const { iv, encryptedData } = params;

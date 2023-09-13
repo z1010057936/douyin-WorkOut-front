@@ -5,7 +5,11 @@
 <!-- <view class="mr-20"></view> -->
 <!-- <tab-bar options="{{sortList}}" current="{{current}}" bind:change="switchTap" /> -->
 <view class="mr-20"></view>
-<swiper current="{{current}}"  style="height:{{swiperHeight}}px;" bindchange="switchTap">
+<view>
+    <product-card-big id="card"  productList="{{distanceSortList}}" fromPage="index" />
+</view>
+
+<!-- <swiper current="{{current}}"  style="height:{{swiperHeight}}px;" bindchange="switchTap">
         <swiper-item>
             <view>
                 <product-card-big id="card"  productList="{{distanceSortList}}" />
@@ -21,4 +25,4 @@
                 <product-card-big id="card"  productList="{{saleSortList}}" />
             </view>
         </swiper-item>
-</swiper>
+</swiper> -->

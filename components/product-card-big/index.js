@@ -6,7 +6,8 @@ Component({
   properties: {
     productList:{
       type:Array,
-    }
+    },
+    fromPage:String
   },
 
   async onLoad(options) {
@@ -45,7 +46,7 @@ Component({
       
       const { id } = e.currentTarget.dataset;
       tt.navigateTo({
-        url: `/pages/product-detail/product-detail?productId=${id}`,
+        url: `/pages/product-detail/product-detail?productId=${id}&fromPage=${this.properties.fromPage}`,
         success: (res) => {
           
         },
@@ -70,16 +71,35 @@ Component({
   },
   //立即报名，跳转到简历填写页
   joinPost() {
-    tt.navigateTo({
-      url: `/pages/resume/resume-form`,
-      success: (res) => {
-        
-      },
-      fail: (res) => {
-        console.log(res);
-      },
-    });
+    //判断是否登录
+    const isLogin = tt.getStorageSync("isLogin");
+    if (isLogin == true) {
+      tt.showModal({
+        content: "确定要报名该岗位吗？",
+        confirmText: "确定",
+        cancelText: "关闭",
+        success(res) {
+          if (res.confirm) {
+            //这里调用后台报名接口
+            tt.showToast({
+              title: '报名成功'
+            });
+          }
 
+        }
+      });
+    } else{
+      tt.navigateTo({
+        url: `/pages/resume/resume-form`,
+        success: (res) => {
+          
+        },
+        fail: (res) => {
+          console.log(res);
+        },
+      });
+    }
   },
+
   }
 })

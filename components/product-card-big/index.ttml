@@ -18,7 +18,7 @@
         <view class="lable">{{item.label[2]}}</view>
     </view>
     <view class="address">{{item.address}}</view>
-    <view class="bottom-box">
+    <view class="bottom-box" tt:if="{{fromPage==='index'}}">
         <view class="join-btn" catchtap="joinPost">
             立即报名
         </view>

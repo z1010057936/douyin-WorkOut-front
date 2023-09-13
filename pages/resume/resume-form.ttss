@@ -38,6 +38,7 @@
 .sex-check-box {
     text-align: center;
     font-size: 32rpx;
+    margin-right: 20rpx;
 }
 
 .bodyStatus {

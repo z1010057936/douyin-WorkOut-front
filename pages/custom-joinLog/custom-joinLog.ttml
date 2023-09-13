@@ -1,0 +1,3 @@
+<view>
+    <product-card-big id="card"  productList="{{distanceSortList}}" fromPage="joinLog" />
+</view>
